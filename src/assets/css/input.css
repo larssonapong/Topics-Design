@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    *{
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    /* topic span before */
+    .topic{
+        @apply content-[''] inline-block absolute -top-[calc(50%-2px)] ss:-top-[calc(50%-4px)] -left-[calc(50%-2px)] ss:-left-[calc(50%-4px)]  bg-primary mm:bg-[#269FA9] h-4 w-4 ss:h-6 ss:w-6 rounded-[4px] border-2 border-title;
+    }
+    /* topic span before */
+
+    /* bg gradiant */
+    .graden{
+        @apply bg-[linear-gradient(15deg,_#13547a_0%,_#80d0c7_100%);];
+    }
+    /* bg gradiant */
+
+    /* onglet pages */
+    .showing:hover ~ div{
+        @apply mm:opacity-100 mm:translate-y-[45%];
+    }
+
+    .showing div:hover{
+        @apply opacity-100 translate-y-0;
+    }
+
+    .active{
+        @apply text-second;
+    }
+    /* onglet pages */
+
+    /* topic section */
+    .etiquette{
+        @apply cursor-pointer text-para text-[14px] ss:text-[16px] mm:text-[18px] px-[4.5px] min-[300px]:px-2 py-2 ss:p-[10px] mm:px-[25px] mm:py-[15px] mr-[5px] mm:mr-5 -mb-[1px] font-medium border-b-[1px] border-b-transparent transition-all duration-300 hover:text-second hover:border-b-second;
+    }
+    /* topic section */
+
+    /* btn how it work */
+    .btn{
+        @apply py-2 px-5 text-primary font-semibold border-[2px] border-primary rounded-[24px] transition-all duration-300 hover:bg-primary hover:text-white; 
+    }
+    /* btn how it work */
+
+    /* Padding vertical sur les dropdowns */
+    .droppad{
+        @apply before:content-[''] before:block after:block after:content-[''] before:h-3 after:h-3 ss:before:h-4 ss:after:h-4;
+    }
+    /* Padding vertical sur les dropdowns */
+}
