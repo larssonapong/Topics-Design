@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sect = document.querySelectorAll(".sect");
     const brows = document.querySelectorAll(".brows");
     const workit = document.querySelectorAll(".workit")
-    const dropfaq = document.querySelectorAll(".dropfaq")
+    const dropfaq = document.querySelectorAll(".dropfaq");
+    const langbtn = document.querySelector('.langbtn');
+    const lang = document.querySelectorAll(".lang");
     let isOpen = false;
 
     //Scroll de la navbar
@@ -247,8 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let droppage = element.nextElementSibling;
         let droph = 400;
         let chevron = element.lastElementChild;
-        // console.log(droppage.scrollHeight);
-        
 
         if (i === 0) {
             droppage.style.maxHeight = `${droph}px`;
@@ -292,4 +292,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     });
+
+    //Gestion de bouton de langues
+    langbtn.addEventListener('click', ()=>{
+        langbtn.nextElementSibling.classList.toggle("hidden");
+    })
+
+    lang.forEach(element =>{
+        element.addEventListener('click', ()=>{
+            let langon = langbtn.children[0].innerHTML;
+
+            langbtn.nextElementSibling.classList.toggle("hidden");
+            langbtn.children[0].innerHTML = element.textContent;
+            element.textContent = langon;
+        })
+    })
 });

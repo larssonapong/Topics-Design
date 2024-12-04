@@ -52,4 +52,12 @@
         @apply before:content-[''] before:block after:block after:content-[''] before:h-3 after:h-3 ss:before:h-4 ss:after:h-4;
     }
     /* Padding vertical sur les dropdowns */
+
+    /* Triangle bottom footer */
+    .triangle{
+        clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+        @apply bg-primary absolute right-0 bottom-2 h-[130px] w-[120px] ss:h-[160px] ss:w-[180px] ssm:h-[200px] ssm:w-[200px];
+    }
+    /* Triangle bottom footer */
+
 }
