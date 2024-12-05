@@ -9,6 +9,13 @@
     html{
         scroll-behavior: smooth;
     }
+
+    /* transition .3s */
+    .trans-300{
+        @apply transition-all duration-300;
+    }
+    /* transition .3s */
+
     /* topic span before */
     .topic{
         @apply content-[''] inline-block absolute -top-[calc(50%-2px)] ss:-top-[calc(50%-4px)] -left-[calc(50%-2px)] ss:-left-[calc(50%-4px)]  bg-primary mm:bg-[#269FA9] h-4 w-4 ss:h-6 ss:w-6 rounded-[4px] border-2 border-title;
@@ -37,13 +44,13 @@
 
     /* topic section */
     .etiquette{
-        @apply cursor-pointer text-para text-[14px] ss:text-[16px] mm:text-[18px] px-[4.5px] min-[300px]:px-2 py-2 ss:p-[10px] mm:px-[25px] mm:py-[15px] mr-[5px] mm:mr-5 -mb-[1px] font-medium border-b-[1px] border-b-transparent transition-all duration-300 hover:text-second hover:border-b-second;
+        @apply cursor-pointer text-para text-[14px] ss:text-[16px] mm:text-[18px] px-[4.5px] min-[300px]:px-2 py-2 ss:p-[10px] mm:px-[25px] mm:py-[15px] mr-[5px] mm:mr-5 -mb-[1px] font-medium border-b-[1px] border-b-transparent trans-300 hover:text-second hover:border-b-second;
     }
     /* topic section */
 
     /* btn how it work */
     .btn{
-        @apply py-2 px-5 text-primary font-semibold border-[2px] border-primary rounded-[24px] transition-all duration-300 hover:bg-primary hover:text-white; 
+        @apply py-2 px-5 text-primary font-semibold border-[2px] border-primary rounded-[24px] trans-300 hover:bg-primary hover:text-white font-open-sans; 
     }
     /* btn how it work */
 
@@ -59,5 +66,11 @@
         @apply bg-primary absolute right-0 bottom-2 h-[130px] w-[120px] ss:h-[160px] ss:w-[180px] ssm:h-[200px] ssm:w-[200px];
     }
     /* Triangle bottom footer */
+
+    /* page topic detail */
+    /* omre input newsletter */
+    /* .newsletter::before{
+        @apply content-[''] inline-block relative top-0 left-0 h-full w-full rounded-[100px] bg-indigo-400;
+    } */
 
 }
