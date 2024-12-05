@@ -205,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 brows[i].classList.remove('opacity-0');
             }, 1);
         })
+
     });
 
     //Gestion du scroll de la section how it work
@@ -294,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //Gestion de bouton de langues
+    langbtn.nextElementSibling.classList.toggle("hidden");
     langbtn.addEventListener('click', ()=>{
         langbtn.nextElementSibling.classList.toggle("hidden");
     })
