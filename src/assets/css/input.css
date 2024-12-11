@@ -67,10 +67,15 @@
     }
     /* Triangle bottom footer */
 
-    /* page topic detail */
-    /* omre input newsletter */
-    /* .newsletter::before{
-        @apply content-[''] inline-block relative top-0 left-0 h-full w-full rounded-[100px] bg-indigo-400;
-    } */
+    /* contact page */
+    .inp-contact{
+        @apply relative pb-[12px] pt-[26px] pr-3 pl-[20px] leading-[5] h-full w-full text-[#717275] rounded-[100px] border-[1px] border-[#717275]/30 outline-none focus:border-blue-400 trans-300;
+    }
+
+    .inp-contact:focus ~ span,
+    .inp-contact:valid ~ span{
+        @apply text-[11px] ss:text-[13px] text-para -translate-y-3 trans-300;
+    }
+    /* contact page */
 
 }
